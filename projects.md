@@ -4,9 +4,9 @@ title: Projects
 permalink: /projects/
 ---
 
-# Projects
+# My LLM-Assisted Projects
 
-Projects with the assistance of Large Language Models.
+Todo.
 
 ## Project List
 
@@ -23,3 +23,5 @@ Check back soon for my first projects! I'm currently working on:
 - Simple web scraper
 - Data visualization dashboard
 - AI-assisted content generator
+
+[Back to home]({{ site.baseurl }}/)
