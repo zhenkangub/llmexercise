@@ -1,0 +1,16 @@
+<div class="project-gallery">
+  {% for post in site.posts %}
+    <div class="gallery-item">
+      {% if post.image %}
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {% include project-image.html filename=post.image alt=post.title thumbnail=true %}
+        </a>
+      {% endif %}
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+      <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+      {% if post.github_repo %}
+        <a href="{{ post.github_repo }}" class="github-link" target="_blank">GitHub</a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
