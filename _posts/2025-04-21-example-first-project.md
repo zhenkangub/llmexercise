@@ -2,7 +2,6 @@
 layout: post
 title: "My First LLM-Assisted Project"
 date: 2025-04-21
-
 github_repo: "https://github.com/zhenkangub/drumtools"
 ---
 
