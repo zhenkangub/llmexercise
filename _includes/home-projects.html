@@ -1,0 +1,22 @@
+<div class="home-projects">
+    <h2>Recent Projects</h2>
+    <div class="home-projects-grid">
+      {% assign projects = site.posts | sort: 'date' | reverse | limit: 3 %}
+      {% for post in projects %}
+        <div class="home-project-card">
+          {% if post.image %}
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              <img src="{{ site.baseurl }}{{ site.imagesurl }}{{ post.image }}" 
+                  alt="{{ post.title }}" class="home-project-image">
+            </a>
+          {% endif %}
+          <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more</a>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="view-all">
+      <a href="{{ site.baseurl }}/projects/" class="view-all-link">View all projects</a>
+    </div>
+  </div>
