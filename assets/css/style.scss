@@ -79,3 +79,8 @@
 .back-link:hover {
   text-decoration: underline;
 }
+
+/* Hide the RSS subscription link paragraph */
+.rss-subscribe {
+  display: none !important;
+}
