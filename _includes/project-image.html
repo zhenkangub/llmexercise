@@ -1,0 +1,8 @@
+<div class="project-image-container">
+  <img src="{{ site.baseurl }}{{ site.imagesurl }}{{ include.filename }}" 
+       alt="{{ include.alt | default: include.filename }}" 
+       class="project-image{% if include.thumbnail %} thumbnail{% endif %}">
+  {% if include.caption %}
+    <div class="image-caption">{{ include.caption }}</div>
+  {% endif %}
+</div>
