@@ -19,9 +19,14 @@ layout: default
     {% endif %}
   </header>
 
+  {% if page.image %}
+    {% include project-image.html filename=page.image alt=page.title %}
+  {% endif %}
+  
   <div class="post-content e-content">
     {{ content }}
   </div>
 
   <a class="back-link" href="{{ site.baseurl }}/projects/">← Back to all projects</a>
+
 </article>
