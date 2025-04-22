@@ -6,22 +6,20 @@ permalink: /projects/
 
 # My LLM-Assisted Projects
 
-Todo.
+Projects with the assistance of Large Language Models.
 
-## Project List
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <h2>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+      </h2>
+      <p>{{ post.date | date: "%B %d, %Y" }}</p>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>
 
-Here you'll find all my projects.
-
-<!-- The Jekyll template system will automatically list your projects here when the site builds -->
-<!-- For now, you'll see this static content in the preview, but after the site builds, your projects will appear -->
-
-### Coming Soon
-
-Check back soon for my first projects! I'm currently working on:
-
-- Text analysis tool
-- Simple web scraper
-- Data visualization dashboard
-- AI-assisted content generator
-
-[Back to home]({{ site.baseurl }}/)
+{% if site.posts.size == 0 %}
+  <p>No projects have been added yet. Check back soon!</p>
+{% endif %}
